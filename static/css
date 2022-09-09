@@ -1,1 +1,18 @@
-
+body {
+    background-color:rgb(0,0,0);
+}
+h1 {
+    color:white;
+}
+h2 {
+    color:white;
+}
+p {
+    color:white;
+}
+p2 {
+    color:white
+}
+a {
+    color:white;
+}
