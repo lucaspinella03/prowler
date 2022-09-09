@@ -1,0 +1,27 @@
+<h1>PROWLER POSTS</h1>
+
+<p>Here is the place to post about any prowler spottings.</p>
+
+<p>make sure to include the following</p>
+<ul>
+    <li>Your name</li>
+    <li>Where you spotted the prowler</li>
+    <li>What did he look like</li>
+    <li>time of day</li>
+</ul>
+<p><a href="{% url 'prowler_post:new_prowler_entry' %}">Click here to add new post</a></p>
+<p>Entries:</p>
+    
+    <ul>
+        {% for e in entries %}
+            <li>
+                <p><strong>Date Spotted: </strong>{{ e.date_added|date:'M d, Y H:i' }}</p>
+                <p><strong>Name: </strong>{{ e.name }}</p>
+                <p>{{ e.text|linebreaks }}</p>
+            </li>
+            <br>
+            <br>
+        {% empty %}
+            <li>no post</li>
+        {% endfor %}
+    </ul>

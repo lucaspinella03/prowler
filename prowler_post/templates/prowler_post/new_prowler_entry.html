@@ -1,0 +1,8 @@
+<h1>Add an Entry</h1>
+
+<form action="{% url 'prowler_post:new_prowler_entry' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Submit Entry</button>
+
+</form>
